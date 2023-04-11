@@ -28,7 +28,7 @@ const library = [
   {
     author: 'J.R.R. Tolkien',
     title: 'The Lord of the Rings',
-    readingStatus: true
+    readingStatus: false
   }
 ];
 

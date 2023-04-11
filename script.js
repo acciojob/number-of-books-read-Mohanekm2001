@@ -1,25 +1,38 @@
+function numberOfBooksRead(library) {
+  // initialize a variable to count the number of books that have been read
+  let count = 0;
+  
+  // iterate over each book in the library array
+  for (let i = 0; i < library.length; i++) {
+    // if the book has been marked as read, increment the count
+    if (library[i].readingStatus === true) {
+      count++;
+    }
+  }
+  
+  // return the total count of books that have been read
+  return count;
+}
+
 const library = [
   {
-    author: "Bill Gates",
-    title: "The Road Ahead",
-    readingStatus: true,
+    author: 'J.K. Rowling',
+    title: 'Harry Potter and the Philosopher\'s Stone',
+    readingStatus: false
   },
   {
-    author: "Steve Jobs",
-    title: "Walter Isaacson",
-    readingStatus: true,
+    author: 'Harper Lee',
+    title: 'To Kill a Mockingbird',
+    readingStatus: false
   },
   {
-    author: "Suzanne Collins",
-    title: "Mockingjay: The Final Book of The Hunger Games",
-    readingStatus: false,
-  },
+    author: 'J.R.R. Tolkien',
+    title: 'The Lord of the Rings',
+    readingStatus: true
+  }
 ];
 
-const numberOfBooksRead = () => {
-  // write your code here
-};
+const numBooksRead = numberOfBooksRead(library);
 
-// Do not change the code below
-
-alert(numberOfBooksRead());
+// update the span element in the HTML with the number of books read
+document.getElementById('num-books').textContent = numBooksRead;
